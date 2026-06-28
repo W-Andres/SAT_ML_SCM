@@ -327,7 +327,7 @@ def color_riesgo(val):
     return colores.get(val, "")
 
 st.dataframe(
-    df_proy.style.applymap(color_riesgo, subset=["Riesgo_Quiebre"]),
+    df_proy.style.map(color_riesgo, subset=["Riesgo_Quiebre"]),
     use_container_width=True,
     hide_index=True
 )
